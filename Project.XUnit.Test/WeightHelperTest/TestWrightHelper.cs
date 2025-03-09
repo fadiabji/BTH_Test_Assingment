@@ -40,20 +40,9 @@
         }
 
         [Theory]
-        [InlineData(-1, 70)]
-        [InlineData(1, 70)]
-        [InlineData(160, -1)]
-        [InlineData(160, 1)]
-
-        [InlineData(50, 199)]
-        [InlineData(50, 201)]
-        [InlineData(299, 50)]
-        [InlineData(301, 50)]
-
         [InlineData(-1, -1)]
-        [InlineData(301, 201)]
-
-        [InlineData(150, 100)]
+        [InlineData(-1, 70)]
+        [InlineData(170, -1)]
         public void Height_Or_Weight_Less_Than_Zero_Throws_Exception(double height, double weight)
         {
             var exception = Assert.Throws<ArgumentException>(() => _weightHelper.CalculateBMI(height, weight));
@@ -62,20 +51,9 @@
 
 
         [Theory]
-        [InlineData(-1, 70)]
-        [InlineData(1, 70)]
-        [InlineData(160, -1)]
-        [InlineData(160, 1)]
-
-        [InlineData(50, 199)]
-        [InlineData(50, 201)]
-        [InlineData(299, 50)]
-        [InlineData(301, 50)]
-
-        [InlineData(-1, -1)]
         [InlineData(301, 201)]
-
-        [InlineData(150, 100)]
+        [InlineData(100, 201)]
+        [InlineData(301, 100)]
         public void Height_Or_Weight_Greater_Than_Max_Throws_Exception(double height, double weight)
         {
             var exception = Assert.Throws<ArgumentException>(() => _weightHelper.CalculateBMI(height, weight));

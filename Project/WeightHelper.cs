@@ -11,6 +11,7 @@ namespace Project
     {
         private const double MinHeight = 0; 
         private const double MaxHeight = 300;
+
         private const double MinWeight = 0;
         private const double MaxWeight = 200;
 

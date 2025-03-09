@@ -1,7 +1,8 @@
 using System;
 using Xunit;
+using Project;
 
-namespace Project.Test
+namespace Project.XUnit.Test.Other
 {
     public class KataCalculatorTests
     {
